@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.buaa.yyg.ddpager">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name = "android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name=".application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.IndexActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!--友盟接口-->
+        <activity
+            android:name=".activity.FeedBackActivity"/>
+        <meta-data
+            android:value="5738653ce0f55af5e2000c62"
+            android:name="UMENG_APPKEY"/>
+        <meta-data
+            android:value="Channel ID"
+            android:name="UMENG_CHANNEL"/>
+
+        <activity android:name=".activity.GalleryActivity"/>
+        <activity android:name=".activity.MainActivity"/>
+        <activity android:name=".activity.ShowImageActivity"/>
+        <activity android:name=".activity.HomeImageActivity"/>
+        <activity android:name=".activity.RecyclerGalleryActivity"/>
+
+        <!--<service android:name=".service.WallPaperService"/>-->
+    </application>
+
+</manifest>
